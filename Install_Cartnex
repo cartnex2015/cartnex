@@ -1,0 +1,49 @@
+ *********cartnex V1.0.x**********
+ ********Install Instructions********
+ *****http://www.cartnex.org/******
+
+NOTE: THIS IS FOR NEW INSTALLATION ONLY!
+
+-------
+INSTALL
+-------
+
+These instructions are for a manual installation using FTP, cPanel or other web hosting Control Panel. 
+
+- Linux Install -
+
+1.unzip the file you will find cartnex_build_1_0.sql in root filder.Create a database and import cartnex_build_1_0.sql file.assets and uploads folder should have write permissions
+2.upload all the files into web root. The web root is different on some servers, cPanel it should be public_html/ and on Plesk it should be httpdocs/.
+
+3.After uploading files set path to your yii library in index.php in root and osadmin folder.set database connection in /protected/config/main.php open
+'db' => array( < [this code below]  /> change all fields.
+                             mysql:host=XXXX;
+                             dbname=XXXX',
+
+                             'username' => 'XXXX',
+ 
+                             'password' => 'XXXX',
+
+4.set site link at protected/config/main.php - open < ['site_url' =>] > Enter Domain name
+  Ex: 'site_url' =>"xxxxxxxxxxx",
+
+5.set admin database connection at osadmin/protected/config/db.php - open 
+return array( < [this code below]  />
+ change all fields.
+                            mysql:host=XXXX;
+                           dbname=XXXX',
+ 
+                           'username' => 'XXXX',
+ 
+                           'password' => 'XXXX',
+
+
+6.set admin link at osadmin/protected/config/params.php - open < ['site_url' =>] > Enter Domain name
+   Ex: 'site_url' =>"xxxxxxxxxxx",
+
+7.osadmin/protected/config/routes.php - open < ['hostInfo' =>] >, < ['secureHostInfo' =>] > Enter Domain name
+               
+                           Ex: 'hostInfo' => 'xxxxxxxxxxx',
+     
+                           Ex: 'secureHostInfo' => 'xxxxxxxxxxx',
+8.you can find futher details in readme.txt
